@@ -48,6 +48,8 @@
   src: url("../fonts/FiraSans-LightItalic.otf") format("truetype");
 }
 
+/*----- iphone 5 -----*/
+/*------ iphone 6-8 plump --------*/
 html {
   scroll-behavior: smooth;
 }
@@ -619,5 +621,30 @@ body .wrapper .copyright p {
   background-color: #332b16;
   padding: 10px 26px;
   border-radius: 7px;
+}
+
+@media only screen and (max-width: 823px) and (max-height: 414px) {
+  .navbar-nav {
+    overflow-y: auto !important;
+    height: 240px !important;
+  }
+}
+
+@media only screen and (max-width: 640px) and (max-height: 360px) {
+  .navbar-nav {
+    overflow-y: auto !important;
+    height: 170px !important;
+  }
+}
+
+.navbar-nav::-webkit-scrollbar {
+  width: 10px;
+  background-color: #FFF;
+}
+
+.navbar-nav::-webkit-scrollbar-thumb {
+  width: 10px;
+  background-color: #bf8524;
+  border-radius: 10px;
 }
 /*# sourceMappingURL=style.css.map */

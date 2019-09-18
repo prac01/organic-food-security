@@ -41,6 +41,27 @@ $big-tablet: 991px;
         @content;
     }
 }
+
+/*----- iphone 5 -----*/
+$phone-1-width: 640px;
+$phone-1-height: 360px;
+
+@mixin phone-1 {
+    @media only screen and (max-width: #{$phone-1-width}) and (max-height: #{$phone-1-height}) {
+        @content;
+    }
+}
+
+/*------ iphone 6-8 plump --------*/
+$phone-3-width: 823px;
+$phone-3-height: 414px;
+
+@mixin phone-3 {
+    @media only screen and (max-width: #{$phone-3-width}) and (max-height: #{$phone-3-height}) {
+        @content;
+    }
+}
+
 html {scroll-behavior: smooth;}
 body {
     margin:0; 
@@ -438,6 +459,7 @@ body {
                         }
                     }
                 }
+                
             }           
         }
         .copyright {
@@ -475,6 +497,7 @@ body {
 .container {
     max-width: 1200px !important;
 }
+ 
 .navbar-toggler { border:none !important; border-radius: none !important;}
 
 .navbar-nav .nav-item .nav-link{
@@ -522,7 +545,24 @@ body {
     background-color:color(navBg);
     padding:10px 26px;
     border-radius:7px;
-   
+    @include phone-3 {
+        overflow-y: auto !important;
+        height: 240px !important;
+    } 
+    @include phone-1 {
+        overflow-y: auto !important;
+        height: 170px !important;
+    } 
 }
+.navbar-nav::-webkit-scrollbar {
+    width: 10px;
+    background-color: #FFF;
+}
+.navbar-nav::-webkit-scrollbar-thumb {
+    width: 10px;
+    background-color: #bf8524;
+    border-radius: 10px;
+}
+
 
 
